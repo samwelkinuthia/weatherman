@@ -8,9 +8,22 @@ import { WeatherProvider } from '../../providers/weather/weather';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  weather: any;
+  location: {
+    city:string
+  }
 
   constructor(public navCtrl: NavController, private weatherProvider: WeatherProvider) {
 
+  }
+
+  ionViewWillEnter(){
+    this.location = {
+      town: 'mombasa'
+    }
+    this.weatherProvider.getWeather(this.location.town).subscribe(weather => {
+      console.log(weather);
+    });
   }
 
 }
