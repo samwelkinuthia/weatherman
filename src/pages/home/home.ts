@@ -10,7 +10,7 @@ import { WeatherProvider } from '../../providers/weather/weather';
 export class HomePage {
   weather: any;
   location: {
-    city:string
+    town:string
   }
 
   constructor(public navCtrl: NavController, private weatherProvider: WeatherProvider) {
