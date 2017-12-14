@@ -15,7 +15,15 @@ export class SettingsPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private storage:Storage) {
-    this.town = 'Nairobi';
+
+      this.storage.get('location').then((val) =>{
+        if(val != null) {
+          let location = JSON.parse(val);
+          this.town = location.town;
+        } else {
+          this.town = 'Nairobi';
+        }
+      });
   }
 
   ionViewDidLoad() {
