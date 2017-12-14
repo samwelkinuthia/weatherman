@@ -22,7 +22,7 @@ export class HomePage {
       town: 'mombasa'
     }
     this.weatherProvider.getWeather(this.location.town).subscribe(weather => {
-      console.log(weather);
+      this.weather = weather.current_observation;
     });
   }
 
