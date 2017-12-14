@@ -17,9 +17,12 @@
   <ion-grid>
     <ion-row>
       <ion-col width-100>
-        <form (ngSubmit)="saveForm()">
-
-        </form>
+          <form (ngSubmit)="saveForm()">
+            <ion-label fixed>
+              city
+            </ion-label>
+            <ion-input (ngModel)="town" name="town" type="text"></ion-input>
+          </form>
       </ion-col>
     </ion-row>
   </ion-grid>
