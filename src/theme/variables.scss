@@ -6,12 +6,22 @@ $colors: (
   secondary:  #435d83,
   danger:     #f53d3d,
   light:      #ffffff,
-  dark:       #222
+  dark:       #222,
+  stall:  #bfbfbf
 );
 
 //toolbar styling
 $toolbar-md-background: color($colors, secondary);
+
+//tabs
 $tabs-md-background: color($colors, secondary);
+$tabs-md-tab-color-active: color($colors, light);
+$tabs-md-tab-color: color($colors, light);
+$tabs-md-tab-text-color: color($colors, light);
+$tabs-md-tab-color-inactive: color($colors, stall);
+//list items
+$list-md-background-color: color($colors, secondary);
+$list-md-text-color: color($colors, light);
 
 @import "ionic.theme.default";
 @import "ionic.ionicons";
