@@ -7,6 +7,11 @@ export class WeatherProvider {
   url;
   constructor(public http: HttpClient) {
     console.log('Hello WeatherProvider Provider');
-    this.url='http://api.wunderground.com/api/'+this.apiKey+'/conditions/q';
+    this.url='http://api.wunderground.com/api/'+this.apiKey+'/conditions/q/Kenya';
+  }
+
+  getWeather(city){
+    return this.http.get(this.url+'/'+city+'.json')
+      .map(res => res.json());
   }
 }
