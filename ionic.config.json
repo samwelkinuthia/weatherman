@@ -1,0 +1,8 @@
+{
+  "name": "weatherman",
+  "app_id": "311339aa",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
