@@ -27,7 +27,7 @@ export class HomePage {
         this.location = JSON.parse(val);
       } else {
         this.location = {
-          town: 'mombasa'
+          town: 'Nairobi'
         }
       }
 
