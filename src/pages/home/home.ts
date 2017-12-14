@@ -22,11 +22,18 @@ export class HomePage {
   }
 
   ionViewWillEnter(){
-    this.location = {
-      town: 'mombasa'
-    }
-    this.weatherProvider.getWeather(this.location.town).subscribe(weather => {
-      this.weather = weather.current_observation;
+    this.storage.get('location').then((val) => {
+      if(val != null){
+        this.location = JSON.parse(val);
+      } else {
+        this.location = {
+          town: 'mombasa'
+        }
+      }
+
+      this.weatherProvider.getWeather(this.location.town).subscribe(weather => {
+        this.weather = weather.current_observation;
+      });
     });
   }
 
