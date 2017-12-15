@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-
+import { HomePage} from "../home/home";
 
 @IonicPage()
 @Component({
@@ -35,7 +35,7 @@ export class SettingsPage {
     }
     // console.log(location);
     this.storage.set('location', JSON.stringify(location));
-    this.navCtrl.push();
+    this.navCtrl.push(HomePage);
   }
 
 }
