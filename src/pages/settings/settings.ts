@@ -35,6 +35,7 @@ export class SettingsPage {
     }
     // console.log(location);
     this.storage.set('location', JSON.stringify(location));
+    this.navCtrl.push();
   }
 
 }
