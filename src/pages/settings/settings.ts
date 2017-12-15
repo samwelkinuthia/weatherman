@@ -33,7 +33,8 @@ export class SettingsPage {
     let location = {
       town: this.town
     }
-    console.log(location);
+    // console.log(location);
+    this.storage.set('location', JSON.stringify(location));
   }
 
 }
