@@ -14,8 +14,7 @@ export class SettingsPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private storage:Storage) {
-
+    private storage: Storage) {
       this.storage.get('location').then((val) =>{
         if(val != null) {
           let location = JSON.parse(val);
@@ -28,6 +27,13 @@ export class SettingsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingsPage');
+  }
+
+  saveForm(){
+    let location = {
+      town: this.town
+    }
+    console.log(location);
   }
 
 }
