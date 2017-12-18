@@ -11,14 +11,14 @@ An Ionic web application that gives you weather conditions for any input town in
 
 The homepage displays default weather conditions for Nairobi. This includes the temprature, cloud conditions etc.
 
-![homepage](src/assets/imgs/default.png)  
+![homepage](src/assets/imgs/default.jpg)  
 
 To find the conditions for another town, The user navigates to the settings page via clicking the settings icon.
 
 
 At the settings page, A form is present for the town input. The field is already populated with the default value "Nairobi"
 
-![form](src/assets/imgs/prefill.png)
+![form](src/assets/imgs/prefil.jpg)
 
 You can then add the town you want to view.
 
@@ -26,7 +26,7 @@ You can then add the town you want to view.
 
 And on saving, You will be redirected to the homepage with the updated weather conditions.
 
-![output](src/assets/imgs/output.png)
+![output](src/assets/imgs/output.jpg)
 
 ## Technologies
 
