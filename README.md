@@ -2,9 +2,7 @@
 
 [![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](http://forthebadge.com)
 
-
 An Ionic web application that gives you weather conditions for any input town in kenya.
-
 
 
 ## How to use
@@ -28,23 +26,20 @@ And on saving, You will be redirected to the homepage with the updated weather c
 
 ![output](src/assets/imgs/output.jpg)
 
-## Technologies
+## Make It Your Own
 
-* Ionic framework
-* Angular 4
-* HTML
-* SASS
-* Underground Weather api
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+### Prerequisites
 
-## Make it your own
-
-Ensure you have the following installed before proceeding.
+Ensure you have the following installed in your machine.
 
 * [Node Js](https://nodejs.org/en/)
 * [Apache Cordova](https://cordova.apache.org/)
 * [Ionic](https://ionicframework.com/)
 
+
+### Installing
 
 Once you have installed these do the following:
 
@@ -54,15 +49,56 @@ Once you have installed these do the following:
 
 * Run ```npm install``` to install node dependencies.
 
-* Run **ionic serve**
+* Navigate to the providers folder.
+
+```
+$ cd/Your_download_path/Weatherman/src/providers/weather
+```
+* Create an environment.ts file in this weather directory.
+```
+$ touch environment.ts
+```
+
+* Obtain an api key from [Underground Weather](https://www.wunderground.com/weather/api/) to make the api calls.
+
+* Add the following to the environment.ts file
+```
+import { Injectable } from "@angular/core";
+
+@Injectable()
+
+export class EnvironmentProvider{
+  key = 'INSERT YOUR API KEY HERE';
+  constructor(){
+  }
+  provideKey(){
+    return this.key
+  }
+}
+
+```
+
+* Now You are all set. Run **ionic serve**
+
 
 * [https://localhost:8100](https://localhost:8100) will be automatically opened in your browser.
 
 
+## Technologies Used
+
+* Ionic framework
+* Angular 4
+* HTML
+* SASS
+* Underground Weather api
+
 Happy Coding!
-
-
 
 ## Author
 
 [Kinuthia Samwel](http://samwelkinuthia.github.io)
+
+
+### Acknowledgment
+
+@bradtraversy for initial youtube tutorial.
