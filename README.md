@@ -1,4 +1,4 @@
-# Weatherman 
+# Weatherman [![Build Status](https://travis-ci.org/samwelkinuthia/weatherman.svg?branch=master)](https://travis-ci.org/samwelkinuthia/weatherman)
 
 [![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](http://forthebadge.com)
 
