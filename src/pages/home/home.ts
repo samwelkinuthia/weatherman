@@ -11,7 +11,7 @@ export class HomePage {
   weather: any;
   location: {
     town:string
-  }
+  };
 
   constructor(
     public navCtrl: NavController,
@@ -21,7 +21,7 @@ export class HomePage {
 
   }
 
-  ionViewWillEnter(){
+  ionViewWillEnter() {
     this.storage.get('location').then((val) => {
       if(val != null){
         this.location = JSON.parse(val);
@@ -30,7 +30,6 @@ export class HomePage {
           town: 'Nairobi'
         }
       }
-
       this.weatherProvider.getWeather(this.location.town).subscribe(weather => {
         this.weather = weather.current_observation;
       });
