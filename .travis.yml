@@ -1,0 +1,19 @@
+sudo: false
+
+language: node_js
+
+branches:
+  only:
+    - master
+
+node_js:
+  - "9.2"
+
+before_install:
+  - npm install -g ionic
+
+script:
+  - npm install
+
+notifications:
+  email: false
